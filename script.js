@@ -36,7 +36,13 @@ document.querySelector("#portrait-caption").hidden = profile.portrait !== "asset
 profile.bio.forEach(text => document.querySelector("#bio").append(element("p", "", text)));
 const socials = document.querySelector("#social-links");
 profile.links.forEach(item => { const a = link(item); if (a) socials.append(a); });
-socials.append(link({ label: "Curriculum vitae ↗", url: "#cv" }));
+const cvUrl = safeUrl(profile.cv);
+const cvProfileLink = link({ label: "Curriculum vitae ↗", url: profile.cv });
+if (cvProfileLink) socials.append(cvProfileLink);
+document.querySelectorAll("[data-cv-link]").forEach(a => {
+  if (cvUrl) a.href = cvUrl;
+  else a.hidden = true;
+});
 profile.news.forEach(item => {
   const row = element("div", "news-row");
   row.append(element("span", "news-date", item.date), element("p", "", item.text));
@@ -80,8 +86,28 @@ items.forEach(item => {
   document.querySelector(selector).append(row);
 });
 }
+profile.experience.forEach(item => {
+  const row = element("article", "education-item");
+  const body = element("div");
+  body.append(element("h3", "", item.organization), element("p", "position", item.role));
+  row.append(body, element("p", "dates", item.dates));
+  document.querySelector("#employment-list").append(row);
+});
 renderTimeline(profile.experience, "#experience-list");
-renderTimeline(profile.research || [], "#research-list");
+if (profile.research?.length) {
+  const university = element("article", "timeline-item university-research");
+  const body = element("div");
+  body.append(element("h3", "", "University of California San Diego"), element("p", "position", "Graduate Research Assistant"));
+  const projects = element("div", "research-projects");
+  profile.research.forEach(item => {
+    const project = element("section", "research-project");
+    project.append(element("h4", "", item.organization), element("p", "dates", item.dates), element("p", "position", item.role), element("p", "description", item.description));
+    projects.append(project);
+  });
+  body.append(projects);
+  university.append(element("p", "dates", "NOV 2019 — SEP 2024"), body);
+  document.querySelector("#experience-list").append(university);
+}
 renderTimeline(profile.service || [], "#service-list");
 profile.education.forEach(item => {
   const row = element("article", "education-item");
@@ -104,17 +130,10 @@ function renderRecords(items, selector) {
 renderRecords(profile.teaching || [], "#teaching-list");
 renderRecords(profile.awards || [], "#awards-list");
 (profile.reviewing || []).forEach(text => document.querySelector("#reviewing-list").append(element("li", "", text)));
-if (profile.cv && safeUrl(profile.cv)) {
-  const cvLink = document.querySelector("#cv-link");
-  cvLink.href = safeUrl(profile.cv);
-  cvLink.hidden = false;
-  document.querySelector("#cv-pending").hidden = true;
-  document.querySelector("#cv-description").textContent = "A closer look at my academic background, experience, and research.";
-}
 document.querySelector("#personal-note").textContent = profile.personalNote;
 document.querySelector("#personal-note").hidden = !profile.personalNote;
 document.querySelector("#year").textContent = new Date().getFullYear();
-const navLinks = [...document.querySelectorAll("nav a")];
+const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
 const observer = new IntersectionObserver(entries => {
   const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
   if (!visible) return;

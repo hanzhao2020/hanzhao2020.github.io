@@ -4,14 +4,13 @@ const profile = {
   "name": "Han Zhao",
   "initials": "HZ",
   "role": "Research Associate Scientist II",
-  "affiliation": "Children’s Hospital of Philadelphia",
-  "location": "Philadelphia, Pennsylvania",
-  "portrait": "assets/portrait.svg",
-  "portraitAlt": "Han Zhao monogram",
+  "affiliation": "The Children’s Hospital of Philadelphia",
+  //"location": "Philadelphia, Pennsylvania",
+  "portrait": "assets/hanzhao_portrait.JPG",
+  "portraitAlt": "Portrait of Han Zhao",
   "bio": [
-    "I am a Research Associate Scientist II at Children’s Hospital of Philadelphia, where I develop computational models of valveless impedance pumps as assist devices for Fontan circulation. My work combines fluid–structure interaction, patient-specific computational fluid dynamics, and device design to study cardiovascular hemodynamics.",
-    "Previously, I was a Postdoctoral Scholar in Computational Cardiology at Stanford University, developing aortic valve models for surgical planning and postoperative outcome prediction. I implemented heart valve hemodynamics using the resistive immersed surface method and extended svMultiPhysics with heart valve modules and reproducible high-performance computing workflows.",
-    "I earned my Ph.D. in Mechanical Engineering at UC San Diego. My doctoral research focused on structural analysis and design optimization of non-matching isogeometric shells, with applications to aircraft wings and heart valves."
+    "I am a Research Associate Scientist II at the Children’s Hospital of Philadelphia, where I use fluid–structure interaction and patient-specific computational fluid dynamics to develop valveless impedance pumps for Fontan circulation.",
+    "Previously, I was a Postdoctoral Scholar focused on computational cardiology at Stanford University. I earned my Ph.D. in Mechanical Engineering at UC San Diego, where I developed computational methods for isogeometric shell analysis and structural optimization."
   ],
   "links": [
     {
@@ -21,20 +20,21 @@ const profile = {
     {
       "label": "Google Scholar",
       "url": "https://scholar.google.com/citations?user=4nYeLeYAAAAJ&hl=en&oi=sra"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/hanzhao2020"
     }
+
   ],
   "news": [
     {
       "date": "2026.08",
-      "text": "Joined Children’s Hospital of Philadelphia as a Research Associate Scientist II, working on impedance pump simulation and design for Fontan circulation."
-    },
-    {
-      "date": "2025",
-      "text": "Open-source shape optimization for isogeometric shells using FEniCS and OpenMDAO published in Engineering with Computers."
+      "text": "Joined Children’s Hospital of Philadelphia as a Research Associate Scientist II."
     },
     {
       "date": "2024.10",
-      "text": "Joined Stanford University as a Postdoctoral Scholar in Computational Cardiology."
+      "text": "Joined Stanford University as a Postdoctoral Scholar."
     },
     {
       "date": "2024.09",
@@ -150,14 +150,14 @@ const profile = {
   "experience": [
     {
       "dates": "AUG 2026 — PRESENT",
-      "organization": "Children’s Hospital of Philadelphia",
+      "organization": "The Children’s Hospital of Philadelphia",
       "role": "Research Associate Scientist II",
       "description": "Developing fluid–structure interaction models of a valveless impedance pump for Fontan circulatory support. Investigating pump design and operating conditions, comparing computational predictions with experiments, and performing patient-specific CFD simulations to evaluate Fontan hemodynamics."
     },
     {
       "dates": "OCT 2024 — AUG 2026",
       "organization": "Stanford University",
-      "role": "Postdoctoral Scholar in Computational Cardiology",
+      "role": "Postdoctoral Scholar",
       "description": "Developed computational aortic valve models to support surgical planning and postoperative outcome prediction. Implemented the resistive immersed surface method for valve opening and closing without remeshing, extended svMultiPhysics with heart valve modules, and established reproducible HPC workflows for aortic hemodynamics simulations."
     }
   ],
@@ -165,25 +165,21 @@ const profile = {
     {
       "dates": "JAN 2022 — SEP 2024",
       "organization": "Gradient-based structural optimization for complex aircraft wing structures",
-      "role": "Research Assistant · UC San Diego · NASA-supported",
       "description": "Developed gradient-based shape and sizing optimization using free-form deformation, Lagrange extraction, and moving shell intersections. Built an open-source toolkit based on OpenMDAO and FEniCS to connect CAD, analysis, and optimization without manual finite element meshing or remeshing, with applications to eVTOL wing design."
     },
     {
       "dates": "JAN 2022 — DEC 2022",
       "organization": "Immersogeometric fluid–structure interaction of trileaflet heart valves",
-      "role": "Research Assistant · UC San Diego · NASA-supported",
       "description": "Developed an immersogeometric FSI framework for trileaflet aortic valves, including leaflet contact and a moving aortic wall. Used an arbitrary Lagrangian–Eulerian formulation, shell–shell coupling, and non-conforming NURBS leaflets to reproduce physiologic valve motion and realistic pressure and flow patterns."
     },
     {
       "dates": "MAR 2021 — OCT 2021",
       "organization": "Interpolation-based immersed isogeometric analysis for shell structures",
-      "role": "Research Assistant · UC San Diego",
       "description": "Implemented an interpolation-based approach that approximates spline basis functions with lower-order Lagrange polynomials. Applied the method to complex shell structures and trimmed NURBS geometry, achieving accurate structural simulations with improved efficiency."
     },
     {
       "dates": "NOV 2019 — DEC 2021",
       "organization": "Automated design-through-analysis for complex aircraft wing structures",
-      "role": "Research Assistant · UC San Diego · NASA-supported",
       "description": "Built a CAD-to-analysis workflow for complex shells, including aircraft wings and heart valve leaflets. Developed penalty-based coupling for non-conforming shells with arbitrary intersections and an open-source FEniCS framework for isogeometric Kirchhoff–Love shells, achieving comparable accuracy to finite element analysis with 10× fewer degrees of freedom."
     }
   ],
@@ -225,7 +221,7 @@ const profile = {
       "title": "MAE131A · Solid Mechanics"
     }
   ],
-  "teachingDescription": "Teaching Assistant at UC San Diego. Held office hours, delivered lectures, prepared homework and exam solutions, and graded assignments and exams with standardized rubrics and timely feedback.",
+  "teachingDescription": "Teaching Assistant at UC San Diego",//. Held office hours, delivered lectures, prepared homework and exam solutions, and graded assignments and exams with standardized rubrics and timely feedback.",
   "awards": [
     {
       "dates": "2020",
