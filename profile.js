@@ -9,7 +9,7 @@ const profile = {
   "portrait": "assets/hanzhao_portrait.JPG",
   "portraitAlt": "Portrait of Han Zhao",
   "bio": [
-    "I am a Research Associate Scientist II at the Children’s Hospital of Philadelphia, where I use fluid–structure interaction and patient-specific computational fluid dynamics to develop valveless impedance pumps for Fontan circulation.",
+    "I am a Research Associate Scientist II at The Children’s Hospital of Philadelphia, where I use fluid–structure interaction and patient-specific computational fluid dynamics to develop valveless impedance pumps for Fontan circulation.",
     "Previously, I was a Postdoctoral Scholar focused on computational cardiology at Stanford University. I earned my Ph.D. in Mechanical Engineering at UC San Diego, where I developed computational methods for isogeometric shell analysis and structural optimization."
   ],
   "links": [
@@ -30,7 +30,7 @@ const profile = {
   "news": [
     {
       "date": "2026.08",
-      "text": "Joined Children’s Hospital of Philadelphia as a Research Associate Scientist II."
+      "text": "Joined The Children’s Hospital of Philadelphia as a Research Associate Scientist II."
     },
     {
       "date": "2024.10",
