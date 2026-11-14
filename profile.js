@@ -188,19 +188,19 @@ const profile = {
       "dates": "MAR 2020 — SEP 2024",
       "institution": "University of California San Diego",
       "degree": "Ph.D. in Mechanical Engineering",
-      "detail": "Dissertation: Structural analysis and design optimization of non-matching isogeometric shells"
+      // "detail": "Dissertation: Structural analysis and design optimization of non-matching isogeometric shells"
     },
     {
       "dates": "SEP 2018 — MAR 2020",
       "institution": "University of California San Diego",
       "degree": "M.S. in Mechanical Engineering",
-      "detail": "GPA: 4.0 / 4.0"
+      // "detail": "GPA: 4.0 / 4.0"
     },
     {
       "dates": "SEP 2014 — JUN 2018",
       "institution": "Liaoning Technical University",
       "degree": "B.Eng. in Vehicle Engineering",
-      "detail": "GPA: 3.7 / 4.0"
+      // "detail": "GPA: 3.7 / 4.0"
     }
   ],
   "teaching": [
